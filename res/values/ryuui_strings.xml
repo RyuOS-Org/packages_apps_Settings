@@ -21,6 +21,10 @@
     <!-- About device screen, Build date -->
     <string name="build_date">Build date</string>
 
+     <!-- Cloudflare DNS -->
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+    <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
+
     <!-- Ryu-UI Maintainer -->
     <string name="ryu_maintainer">Build Maintainer</string>
 
