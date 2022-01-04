@@ -18,17 +18,21 @@
      <!-- About device screen, Ryu-UI -->
     <string name="ryu_version">Ryu version</string>
 
-    <!-- About device screen, Build date -->
+     <!-- About device screen, Build date -->
     <string name="build_date">Build date</string>
+
+     <!-- AdGuard DNS -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
 
      <!-- Cloudflare DNS -->
     <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
     <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
 
-    <!-- Ryu-UI Maintainer -->
+     <!-- Ryu-UI Maintainer -->
     <string name="ryu_maintainer">Build Maintainer</string>
 
-    <!-- SELinux Status -->
+     <!-- SELinux Status -->
     <string name="selinux_status">SELinux status</string>
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
