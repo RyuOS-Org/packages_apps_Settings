@@ -23,5 +23,9 @@
 
     <!-- Ryu-UI Maintainer -->
     <string name="ryu_maintainer">Pengelola</string>
+
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca">Paksa LTE CA</string>
+    <string name="force_lte_ca_summary">Paksa penggabungan saluran LTE supaya berfungsi</string>
     
 </resources>
