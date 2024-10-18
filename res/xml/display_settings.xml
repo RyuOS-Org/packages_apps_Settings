@@ -257,6 +257,12 @@
     <PreferenceCategory
         android:title="@string/additional_settings_category_title">
 
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+
         <com.android.settings.custom.preference.GlobalSettingSwitchPreference
             android:key="window_ignore_secure"
             android:title="@string/ignore_window_secure_title"
