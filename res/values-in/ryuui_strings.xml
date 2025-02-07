@@ -17,5 +17,17 @@
 
      <!-- About device screen, Ryu-UI -->
     <string name="ryu_version">Versi Ryu</string>
+
+    <!-- About device screen, Build date -->
+    <string name="build_date">Tanggal pembuatan</string>
+
+    <!-- Ryu-UI Maintainer -->
+    <string name="ryu_maintainer">Pengelola</string>
+
+    <!-- SELinux Status -->
+    <string name="selinux_status">Status SELinux</string>
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
     
 </resources>
