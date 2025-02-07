@@ -29,6 +29,15 @@
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+    
+    <!-- Ryu-UI version -->
+    <Preference
+        android:key="ryu_version"
+        android:title="@string/ryu_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:searchable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.RyuUIVersionDetailPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
