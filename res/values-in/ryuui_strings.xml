@@ -23,8 +23,5 @@
 
     <!-- Ryu-UI Maintainer -->
     <string name="ryu_maintainer">Pengelola</string>
-
-    <!-- SELinux Status -->
-    <string name="selinux_status">Status SELinux</string>
     
 </resources>
