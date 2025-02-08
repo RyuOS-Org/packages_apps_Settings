@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
      <!-- About device screen, Ryu-UI -->
-    <string name="ryu_version">Ryu version</string>
+    <string name="ryu_version">Ryu-UI version</string>
 
      <!-- About device screen, Build date -->
     <string name="build_date">Build date</string>

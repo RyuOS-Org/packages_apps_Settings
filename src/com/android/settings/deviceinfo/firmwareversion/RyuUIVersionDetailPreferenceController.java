@@ -1,7 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
- * Copyright (C) 2019-2021 The Evolution X Project
- * Copyright (C) 2025 Ryu-UI Org
+ * Copyright (C) 2019-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,32 +32,17 @@ import androidx.preference.Preference;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
-import com.android.settings.slices.Sliceable;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 
 public class RyuUIVersionDetailPreferenceController extends BasePreferenceController {
 
-    private static final String TAG = "RyuVersionDialogCtrl";
-    private static final int DELAY_TIMER_MILLIS = 500;
-    private static final int ACTIVITY_TRIGGER_COUNT = 3;
+    private static final String TAG = "RyuUIVersionDialogCtrl";
 
-    private static final String KEY_RYU_VERSION_PROP = "ro.modversion";
-
-    private static final String PLATLOGO_PACKAGE_NAME = "com.android.egg";
-    private static final String PLATLOGO_ACTIVITY_CLASS =
-            PLATLOGO_PACKAGE_NAME + ".EasterEgg";
-
-    private final UserManager mUserManager;
-    private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
-
-    private RestrictedLockUtils.EnforcedAdmin mFunDisallowedAdmin;
-    private boolean mFunDisallowedBySystem;
+    private static final String RYUUI_VERSION = "ro.ryu.version";
 
     public RyuUIVersionDetailPreferenceController(Context context, String key) {
         super(context, key);
-        mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
-        initializeAdminPermissions();
     }
 
     @Override
@@ -79,54 +62,7 @@ public class RyuUIVersionDetailPreferenceController extends BasePreferenceContro
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(KEY_RYU_VERSION_PROP,
+        return SystemProperties.get(RYUUI_VERSION,
                 mContext.getString(R.string.unknown));
-    }
-
-    @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (!TextUtils.equals(preference.getKey(), getPreferenceKey())) {
-            return false;
-        }
-        if (Utils.isMonkeyRunning()) {
-            return false;
-        }
-        arrayCopy();
-        mHits[mHits.length - 1] = SystemClock.uptimeMillis();
-        if (mHits[0] >= (SystemClock.uptimeMillis() - DELAY_TIMER_MILLIS)) {
-            if (mUserManager.hasUserRestriction(UserManager.DISALLOW_FUN)) {
-                if (mFunDisallowedAdmin != null && !mFunDisallowedBySystem) {
-                    RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mContext,
-                            mFunDisallowedAdmin);
-                }
-                Log.d(TAG, "Sorry, no fun for you!");
-                return true;
-            }
-
-	        final Intent intent = new Intent(Intent.ACTION_MAIN)
-                    .setClassName(PLATLOGO_PACKAGE_NAME, PLATLOGO_ACTIVITY_CLASS);
-            try {
-                mContext.startActivity(intent);
-            } catch (Exception e) {
-                Log.e(TAG, "Unable to start activity " + intent.toString());
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Copies the array onto itself to remove the oldest hit.
-     */
-    @VisibleForTesting
-    void arrayCopy() {
-        System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
-    }
-
-    @VisibleForTesting
-    void initializeAdminPermissions() {
-        mFunDisallowedAdmin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
-                mContext, UserManager.DISALLOW_FUN, UserHandle.myUserId());
-        mFunDisallowedBySystem = RestrictedLockUtilsInternal.hasBaseUserRestriction(
-                mContext, UserManager.DISALLOW_FUN, UserHandle.myUserId());
     }
 }
