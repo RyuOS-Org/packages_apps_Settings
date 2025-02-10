@@ -221,4 +221,10 @@
 
     <!-- Pointer fill color setting outline color-->
     <color name="pointer_fill_outline_color">#000000</color>
+
+    <!-- Color for card preference -->
+    <color name="preference_card_background">@android:color/system_neutral1_10</color>
+
+    <!-- Color for caccent color RyuLab icon -->
+    <color name="ryulab_icon_accent">@android:color/system_accent1_600</color>
 </resources>

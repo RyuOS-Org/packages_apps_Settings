@@ -524,4 +524,6 @@ public class Settings extends SettingsActivity {
      * Activity for WirelessDebuggingActivity
      */
     public static class WirelessDebuggingActivity extends SettingsActivity { /* empty */ }
+    // RyuLab Additions.
+    public static class RyuLabSettingsActivity extends SettingsActivity {}
 }
