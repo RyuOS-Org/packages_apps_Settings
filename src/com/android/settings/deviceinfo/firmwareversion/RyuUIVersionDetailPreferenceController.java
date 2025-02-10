@@ -40,6 +40,7 @@ public class RyuUIVersionDetailPreferenceController extends BasePreferenceContro
     private static final String TAG = "RyuUIVersionDialogCtrl";
 
     private static final String RYUUI_VERSION = "ro.ryu.version";
+    private static final String RYUUI_BUILD_TYPE = "ro.ryu.build.type";
 
     public RyuUIVersionDetailPreferenceController(Context context, String key) {
         super(context, key);
@@ -62,7 +63,9 @@ public class RyuUIVersionDetailPreferenceController extends BasePreferenceContro
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(RYUUI_VERSION,
-                mContext.getString(R.string.unknown));
+        String version = SystemProperties.get(RYUUI_VERSION, mContext.getString(R.string.unknown));
+        String buildType = SystemProperties.get(RYUUI_BUILD_TYPE, mContext.getString(R.string.unknown));
+
+        return version + " | " + buildType;
     }
 }
