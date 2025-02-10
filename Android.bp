@@ -67,7 +67,7 @@ android_library {
         "res-export", // for external usage
         "res-product",
         "TouchGestures/res",
-        "RyuLab/res,
+        "RyuLab/res",
     ],
 
     aaptflags: ["--extra-packages org.ryuui.lab",
