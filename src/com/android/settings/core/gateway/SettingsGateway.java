@@ -211,6 +211,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.android.settings.livedisplay.LiveDisplaySettings;
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
+import org.ryuui.lab.RyuLab;
 
 public class SettingsGateway {
 
@@ -411,6 +412,8 @@ public class SettingsGateway {
             LiveDisplaySettings.class.getName(),
             WifiTetherClientManager.class.getName(),
             WirelessDebuggingFragment.class.getName()
+            // Ryu-UI Org additions
+            RyuLab.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -458,5 +461,7 @@ public class SettingsGateway {
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.WirelessDebuggingActivity.class.getName(),
+            // Ryu-UI Org additions
+            Settings.RyuLabSettingsActivity.class.getName(),
     };
 }
