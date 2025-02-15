@@ -17,6 +17,9 @@
 
      <!-- About device screen, Ryu-UI -->
     <string name="ryu_version">Ryu-UI version</string>
+    <string name="my_device_info_device_details_summary">Phone Number, IMEI, and etc.</string>
+    <string name="ryu_banner">Ryu-UI</string>
+    <string name="ryu_banner2">Org</string>
 
      <!-- About device screen, Build date -->
     <string name="build_date">Build date</string>
@@ -30,10 +33,10 @@
     <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
 
      <!-- Ryu-UI Maintainer -->
-    <string name="ryu_maintainer">Build Maintainer</string>
+    <string name="ryu_maintainer">Maintainer</string>
 
     <!-- Force LTE_CA -->
     <string name="force_lte_ca">Force LTE CA</string>
     <string name="force_lte_ca_summary">Force LTE carrier aggregation to work</string>
-    
+
 </resources>
