@@ -38,6 +38,7 @@
                 android:id="@+id/suggestion_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
                 android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd" />
 
@@ -61,20 +62,19 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
         android:touchscreenBlocksFocus="false"
         android:keyboardNavigationCluster="false">
         <LinearLayout
             android:id="@+id/app_bar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="8dp"
-            android:paddingBottom="16dp"
-            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+            android:orientation="vertical"
+            android:minHeight="76dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <include layout="@layout/search_bar_unified_version"/>
+            <include
+                android:id="@+id/homepage_app_bar_unified_view"
+                layout="@layout/settings_homepage_app_bar_unified_layout"/>
 
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>

@@ -19,7 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/search_bar_margin">
+    android:layout_margin="@dimen/search_bar_margin"
+     android:layout_marginBottom="20dp"
+    android:layout_marginStart="@dimen/card_highlight_margin_start"
+    android:layout_marginEnd="@dimen/card_highlight_margin_end">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/search_bar"
@@ -31,11 +34,8 @@
             android:id="@+id/search_action_bar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/search_bar_height"
-            android:paddingStart="@dimen/search_bar_padding_start"
-            android:paddingEnd="@dimen/search_bar_padding_end"
+            android:paddingStart="4dp"
             android:background="@drawable/search_bar_selected_background"
-            android:touchscreenBlocksFocus="false"
-            android:nextFocusForward="@+id/homepage_container"
             android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"
             android:navigationIcon="@drawable/ic_homepage_search">
             <TextView
@@ -43,7 +43,7 @@
                 style="@style/TextAppearance.SearchBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="@dimen/search_bar_title_padding_start"
+                android:paddingStart="-4dp"
                 android:layout_gravity="start"
                 android:text="@string/search_menu"/>
         </Toolbar>

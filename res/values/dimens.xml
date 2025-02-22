@@ -96,6 +96,7 @@
     <dimen name="multiple_users_user_icon_size">40dp</dimen>
 
     <!-- Homepage -->
+    <dimen name="homepage_title_margin_top">104dp</dimen>
     <dimen name="homepage_title_margin_bottom">8dp</dimen>
     <dimen name="homepage_title_margin_horizontal">24dp</dimen>
     <dimen name="homepage_padding_horizontal_two_pane">24dp</dimen>
@@ -532,4 +533,7 @@
     <dimen name="zen_mode_circular_icon_margin_between">4dp</dimen>
     <dimen name="zen_mode_circular_icon_margin_vertical">8dp</dimen>
     <dimen name="zen_mode_circular_icon_text_size">18dp</dimen>
+
+    <dimen name="card_highlight_margin_start">8dp</dimen>
+    <dimen name="card_highlight_margin_end">8dp</dimen>
 </resources>

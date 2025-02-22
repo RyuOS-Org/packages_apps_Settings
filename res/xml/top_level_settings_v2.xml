@@ -20,11 +20,16 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
+    <PreferenceCategory
+        android:order="-145"
+        android:key="top_level_account_category">
+    </PreferenceCategory>
+
     <!-- Grup 1: ryulab and about device -->
     <PreferenceCategory
         android:order="-140"
         android:layout="@layout/settingslib_preference_category_no_title">
-	      <Preference
+	      <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
             android:icon="@drawable/ic_settings_about_device_filled"
             android:key="top_level_about_device"
@@ -43,13 +48,6 @@
             android:title="@string/ryulab_title"
             android:summary="@string/ryulab_summary"
             settings:controller="com.android.settings.TopLevelExtensionsEntryPreferenceController" />
-    </PreferenceCategory>
-
-    <!-- Grup 2: Account -->
-    <PreferenceCategory
-        android:order="-135"
-        android:key="top_level_account_category"
-        android:layout="@layout/settingslib_preference_category_no_title">
     </PreferenceCategory>
 
     <!-- Grup 3: Connectivity -->
