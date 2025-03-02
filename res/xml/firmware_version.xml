@@ -21,9 +21,11 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- Ryu-UI banner -->
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/ryuui_banner"
         android:key="ryuui_banner"
+        android:minHeight="250dp"
         android:selectable="false"
         settings:enableCopying="false" />
 
