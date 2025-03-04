@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="40dp"
+    android:width="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <path
+        android:fillColor="@color/ic_device_name_storage_center_color"
+        android:pathData="M10,2.5L30,2.5A1.5,1.5 0,0 1,31.5 4L31.5,36A1.5,1.5 0,0 1,30 37.5L10,37.5A1.5,1.5 0,0 1,8.5 36L8.5,4A1.5,1.5 0,0 1,10 2.5z"
+        android:strokeColor="@color/ryulab_icon_accent"
+        android:strokeWidth="3"/>
+    <path
+        android:fillColor="@color/ic_device_name_storage_rectangle_color"
+        android:pathData="M15.5,31L24.5,31A1.5,1.5 0,0 1,26 32.5L26,32.5A1.5,1.5 0,0 1,24.5 34L15.5,34A1.5,1.5 0,0 1,14 32.5L14,32.5A1.5,1.5 0,0 1,15.5 31z"/>
+</vector>

@@ -39,4 +39,13 @@
     <string name="force_lte_ca">Force LTE CA</string>
     <string name="force_lte_ca_summary">Force LTE carrier aggregation to work</string>
 
+    <!-- My device info -->
+    <string name="device_name_title">Device name</string>
+    <string name="device_storage_title">Storage</string>
+    <string name="device_processor_title">Processor</string>
+    <string name="device_ram_title">RAM</string>
+    <string name="device_camera_title">Camera</string>
+    <string name="device_battery_title">Battery</string>
+    <string name="device_display_title">Display</string>
+
 </resources>

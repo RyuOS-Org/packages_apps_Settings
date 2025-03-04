@@ -47,6 +47,8 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
+import com.android.settings.BannerPreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -123,6 +125,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         controllers.add(new FeedbackPreferenceController(fragment, context));
         controllers.add(new FccEquipmentIdPreferenceController(context));
         controllers.add(new UptimePreferenceController(context, lifecycle));
+        controllers.add(new BannerPreferenceController(context));
 
         return controllers;
     }
@@ -139,8 +142,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         // TODO: Migrate into its own controller.
         final LayoutPreference headerPreference =
                 getPreferenceScreen().findPreference(KEY_MY_DEVICE_INFO_HEADER);
-        final boolean shouldDisplayHeader = getContext().getResources().getBoolean(
-                R.bool.config_show_device_header_in_device_info);
+        final boolean shouldDisplayHeader = false;
         headerPreference.setVisible(shouldDisplayHeader);
         if (!shouldDisplayHeader) {
             return;
