@@ -52,7 +52,7 @@
         <!-- Device details -->
         <Preference
             android:key="device_detail"
-            android:order="4"
+            android:order="2"
             android:title="@string/my_device_info_device_details_category_title"
             android:summary="@string/my_device_info_device_details_summary"
             settings:layout="@layout/card_preference_top"
@@ -61,7 +61,7 @@
         <!-- Account name -->
         <Preference
             android:key="branded_account"
-            android:order="2"
+            android:order="4"
             android:title="@string/my_device_info_account_preference_title"
             android:summary="@string/summary_placeholder"
             settings:layout="@layout/card_preference_middle"
