@@ -16,10 +16,6 @@
  */
 package com.android.settings.utils
 
-import android.os.Build
-import java.io.BufferedReader
-import java.io.FileReader
-import java.io.IOException
 import android.content.Context
 import android.os.Environment
 import android.os.StatFs
@@ -29,6 +25,7 @@ import android.view.Display
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.os.storage.StorageManager
+import com.android.settings.R
 
 import com.android.internal.os.PowerProfile
 import com.android.internal.util.MemInfoReader
@@ -42,31 +39,18 @@ import kotlin.math.roundToInt
 object DeviceInfoUtil {
 
     fun getProcessor(): String {
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && Build.SOC_MODEL != null) {
-        return Build.SOC_MODEL
-      }
-
-      if (!Build.HARDWARE.isNullOrEmpty()) {
-        return Build.HARDWARE.replace("_", " ").replaceFirstChar { it.uppercase() }
-      }
-
-      return getCpuInfoFromProc() ?: "Unknown Processor"
+        val model = SystemProperties.get("ro.product.model", "").lowercase()
+        val numberMatch = Regex("""\b(pixel\s*)(\d+)([a-z\s]*)\b""").find(model)
+        val number = numberMatch?.groups?.get(2)?.value?.toIntOrNull()
+        return when (number) {
+            6 -> "Google Tensor"
+            7 -> "Google Tensor G2"
+            8 -> "Google Tensor G3"
+            9 -> "Google Tensor G4"
+            else -> SystemProperties.get("persist.sys.device_processor_info", "Unknown")
+        }
     }
 
-    private fun getCpuInfoFromProc(): String? {
-      return try {
-          BufferedReader(FileReader("/proc/cpuinfo")).use { reader ->
-              reader.lineSequence()
-                  .firstOrNull { it.startsWith("Hardware") }
-                  ?.split(":")
-                  ?.getOrNull(1)
-                  ?.trim()
-          }
-      } catch (e: IOException) {
-          null
-      }
-  }
-  
     fun getTotalRam(): String {
         val memInfoReader = MemInfoReader()
         memInfoReader.readMemInfo()
@@ -228,10 +212,8 @@ object DeviceInfoUtil {
           }
           formatCameraSpecs(context, rearCameras)
       } catch (e: CameraAccessException) {
-          Log.e("DeviceInfoUtil", "Camera access error", e)
           context.getString(R.string.camera_access_error)
       } catch (e: SecurityException) {
-          Log.e("DeviceInfoUtil", "Camera permission denied", e)
           context.getString(R.string.camera_permission_denied)
       } catch (e: Exception) {
           context.getString(R.string.unknown)
