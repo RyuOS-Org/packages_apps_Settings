@@ -47,7 +47,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
-import com.android.settings.BannerPreferenceController;
+import com.android.settings.deviceinfo.BannerPreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
