@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2023 the RisingOS Android Project
- * Copyright (C) 2025 Ryu-UI Org
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +24,6 @@ import android.view.Display
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.os.storage.StorageManager
-import com.android.settings.R
 
 import com.android.internal.os.PowerProfile
 import com.android.internal.util.MemInfoReader
@@ -163,75 +161,70 @@ object DeviceInfoUtil {
     }
 
     fun getFrontCameraMegapixels(context: Context): String {
-      return try {
-        val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        var frontCameraMp = context.getString(R.string.device_not_available)
-
-        for (cameraId in cameraManager.cameraIdList) {
-          val characteristics = cameraManager.getCameraCharacteristics(cameraId)
-
-          if (characteristics.get(CameraCharacteristics.LENS_FACING) == CameraCharacteristics.LENS_FACING_FRONT) {
-            val sensorSize = characteristics.get(CameraCharacteristics.SENSOR_INFO_PIXEL_ARRAY_SIZE)!!
-            val mp = (sensorSize.width * sensorSize.height) / 1_000_000.0
-
-            frontCameraMp = "${context.getString(R.string.device_front_camera)} ${"%.1f".format(mp)} MP"
-            break
-          }
+        val frontCameraInfo = SystemProperties.get("persist.sys.device_camera_info_front", null)
+        if (!frontCameraInfo.isNullOrEmpty()) {
+            return "Front $frontCameraInfo MP"
         }
-        frontCameraMp
-      } catch (e: Exception) {
-        context.getString(R.string.not_available)
-      }
+
+        val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+        val cameraIdList = cameraManager.cameraIdList
+
+        for (cameraId in cameraIdList) {
+            val characteristics = cameraManager.getCameraCharacteristics(cameraId)
+            val facing = characteristics.get(CameraCharacteristics.LENS_FACING)
+
+            if (facing != null && facing == CameraCharacteristics.LENS_FACING_FRONT) {
+                val megapixels = getCameraMegapixels(characteristics)
+                val formattedMp = formatMegapixels(megapixels)
+                return "Front $formattedMp"
+            }
+        }
+
+        return "Unknown"
     }
 
     fun getRearCameraMegapixels(context: Context): String {
-      return try {
-          val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
-          val rearCameras = mutableListOf<Pair<Float, String>>()
+        val rearCameraInfo = SystemProperties.get("persist.sys.device_camera_info_rear", null)
+        if (!rearCameraInfo.isNullOrEmpty()) {
+            val rearMegapixels = rearCameraInfo.split(",").joinToString(" + ") { "$it MP" }
+            return "Rear $rearMegapixels"
+        }
+        val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+        val cameraIdList = cameraManager.cameraIdList
+        val rearMegapixelsList = mutableListOf<String>()
 
-          cameraManager.cameraIdList.forEach { cameraId ->
-              val characteristics = cameraManager.getCameraCharacteristics(cameraId)
+        for (cameraId in cameraIdList) {
+            val characteristics = cameraManager.getCameraCharacteristics(cameraId)
+            val facing = characteristics.get(CameraCharacteristics.LENS_FACING)
 
-              if (characteristics.get(CameraCharacteristics.LENS_FACING) == CameraCharacteristics.LENS_FACING_BACK) {
-                  val sensorSize = characteristics.get(CameraCharacteristics.SENSOR_INFO_PIXEL_ARRAY_SIZE)
-                  val colorFilter = characteristics.get(CameraCharacteristics.SENSOR_INFO_COLOR_FILTER_ARRANGEMENT)
-
-                  if (sensorSize != null && colorFilter != ColorFilterArrangement.MONO) {
-                      val mp = (sensorSize.width * sensorSize.height) / 1_000_000f
-                      val type = when {
-                          characteristics.get(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES)
-                              ?.contains(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA) == true -> ""
-                          mp > 40 -> context.getString(R.string.ultra_high_res)
-                          mp > 12 -> context.getString(R.string.main_camera)
-                          mp > 8 -> context.getString(R.string.wide_camera)
-                          else -> context.getString(R.string.other_camera)
-                      }
-                      rearCameras.add(mp to type)
-                  }
-              }
-          }
-          formatCameraSpecs(context, rearCameras)
-      } catch (e: CameraAccessException) {
-          context.getString(R.string.camera_access_error)
-      } catch (e: SecurityException) {
-          context.getString(R.string.camera_permission_denied)
-      } catch (e: Exception) {
-          context.getString(R.string.unknown)
-      }
-  }
-
-  private fun formatCameraSpecs(cameras: List<Pair<Float, String>>): String {
-    return if (cameras.isNotEmpty()) {
-        val specs = cameras.sortedByDescending { it.first }.map { (mp, type) ->
-            val formattedMp = "%.1f".format(mp).removeSuffix(".0")
-            when {
-                type.isNotEmpty() -> "$formattedMp MP ($type)"
-                else -> "$formattedMp MP"
+            if (facing != null && facing == CameraCharacteristics.LENS_FACING_BACK) {
+                val megapixels = getCameraMegapixels(characteristics)
+                val formattedMp = formatMegapixels(megapixels)
+                rearMegapixelsList.add(formattedMp)
             }
         }
-        "${context.getString(R.string.device_rear_camera)}: " + specs.joinToString(" + ")
-    } else {
-      "Unknown"
+
+        return if (rearMegapixelsList.isNotEmpty()) {
+            "Rear ${rearMegapixelsList.joinToString(" + ")}"
+        } else {
+            "Unknown"
+        }
     }
-  }
+
+    private fun getCameraMegapixels(characteristics: CameraCharacteristics): Double {
+        val sensorSize = characteristics.get(CameraCharacteristics.SENSOR_INFO_PIXEL_ARRAY_SIZE)
+        if (sensorSize != null) {
+            val totalPixels = sensorSize.width.toLong() * sensorSize.height.toLong()
+            return totalPixels.toDouble() / 1_000_000.0
+        }
+        return 0.0
+    }
+
+    private fun formatMegapixels(megapixels: Double): String {
+        return if (megapixels % 1.0 == 0.0) {
+            "${megapixels.toInt()}MP"
+        } else {
+            "%.1fMP".format(megapixels)
+        }
+    }
 }
