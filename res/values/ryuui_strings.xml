@@ -47,7 +47,16 @@
     <string name="device_processor_title">Processor</string>
     <string name="device_ram_title">RAM</string>
     <string name="device_camera_title">Camera</string>
+    <string name="device_front_camera">Front</string>
+    <string name="device_rear_camera">Rear</string>
+    <string name="unknown">Unknown</string>
+    <string name="device_main_camera">Main</string>
+    <string name="device_wide_camera">Wide</string>
+    <string name="device_ultra_high_res">Ultra High-Res</string>
+    <string name="camera_access_error">Camera system error</string>
+    <string name="camera_permission_denied">Permission denied</string>
     <string name="device_battery_title">Battery</string>
     <string name="device_display_title">Display</string>
+    <string name="device_not_available">Not available</string>
 
 </resources>

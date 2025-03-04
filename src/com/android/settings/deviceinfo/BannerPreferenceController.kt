@@ -44,7 +44,7 @@ class BannerPreferenceController(context: Context) : AbstractPreferenceControlle
         deviceNameText?.text = getDeviceName()
 
         bannerPreference.findViewById<TextView>(R.id.banner_text)?.text =
-            "Ryu-UI ${getOSVersion()}"
+            "Ryu-UI | ${getOSVersion()}"
 
         bannerPreference.findViewById<TextView>(R.id.storage_info)?.text =
             "${DeviceInfoUtil.getStorageUsed(mContext)} / ${DeviceInfoUtil.getStorageTotal(mContext)}"

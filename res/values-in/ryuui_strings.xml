@@ -35,7 +35,12 @@
     <string name="device_storage_title">Penyimpanan</string>
     <string name="device_processor_title">Processor</string>
     <string name="device_camera_title">Kamera</string>
+    <string name="device_front_camera">Depan</string>
+    <string name="device_rear_camera">Belakang</string>
+    <string name="unknown">Tidak diketahui</string>
+    <string name="camera_permission_denied">Permisi ditolak</string>
     <string name="device_battery_title">Baterai</string>
     <string name="device_display_title">Resolusi layar</string>
+    <string name="device_not_available">Tidak tersedia</string>
 
 </resources>

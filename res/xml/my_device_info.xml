@@ -49,6 +49,15 @@
             settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
             settings:enableCopying="true"/>
 
+        <!-- Device details -->
+        <Preference
+            android:key="device_detail"
+            android:order="4"
+            android:title="@string/my_device_info_device_details_category_title"
+            android:summary="@string/my_device_info_device_details_summary"
+            settings:layout="@layout/card_preference_top"
+            android:fragment="com.android.settings.deviceinfo.aboutphone.DeviceDetailsFragment" />
+
         <!-- Account name -->
         <Preference
             android:key="branded_account"
@@ -58,15 +67,6 @@
             settings:layout="@layout/card_preference_middle"
             settings:enableCopying="true"
             settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
-
-        <!-- Device details -->
-        <Preference
-            android:key="device_detail"
-            android:order="4"
-            android:title="@string/my_device_info_device_details_category_title"
-            android:summary="@string/my_device_info_device_details_summary"
-            settings:layout="@layout/card_preference_middle"
-            android:fragment="com.android.settings.deviceinfo.aboutphone.DeviceDetailsFragment" />
 
         <!-- Android version -->
         <Preference
