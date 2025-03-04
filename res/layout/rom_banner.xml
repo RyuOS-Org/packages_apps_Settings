@@ -50,7 +50,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/device_name_card"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="24dp"
         app:cardElevation="0dp"
         app:cardCornerRadius="28dp"
@@ -62,7 +62,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="16dp">
@@ -102,7 +102,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/storage_card"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="24dp"
         app:cardElevation="0dp"
         app:cardCornerRadius="28dp"
@@ -114,7 +114,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="16dp">
