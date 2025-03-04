@@ -27,7 +27,8 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:elevation="0dp"
-                android:contentDescription="@null" />
+                android:contentDescription="@null"
+                app:dimLevel="40" />
 
             <TextView
                 android:id="@+id/banner_text"
