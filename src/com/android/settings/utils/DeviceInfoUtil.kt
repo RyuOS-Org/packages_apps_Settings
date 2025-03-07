@@ -37,7 +37,7 @@ import kotlin.math.roundToInt
 
 object DeviceInfoUtil {
 
-    fun getProcessor(): String {
+    fun getProcessor(context: Context): String {
         val processor_info = context.getString(R.string.device_processor_info)
         return if (processor_info.isNotBlank()) processor_info else context.getString(R.string.device_unknown)
     }
@@ -153,7 +153,7 @@ object DeviceInfoUtil {
         return "${width} x ${height}"
     }
 
-    fun getCamera(): String {
+    fun getCamera(context: Context): String {
       val camera_info = context.getString(R.string.device_camera_info)
       return if (camera_info.isNotBlank()) camera_info else context.getString(R.string.device_not_available)
   }
