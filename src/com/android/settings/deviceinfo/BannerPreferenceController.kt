@@ -49,11 +49,11 @@ class BannerPreferenceController(context: Context) : AbstractPreferenceControlle
         bannerPreference.findViewById<TextView>(R.id.storage_info)?.text =
             "${DeviceInfoUtil.getStorageUsed(mContext)} / ${DeviceInfoUtil.getStorageTotal(mContext)}"
         bannerPreference.findViewById<TextView>(R.id.processor_info)?.text =
-            DeviceInfoUtil.getProcessor()
+            DeviceInfoUtil.getProcessor(bannerPreference.context)
         bannerPreference.findViewById<TextView>(R.id.ram_info)?.text =
             DeviceInfoUtil.getTotalRam()
         bannerPreference.findViewById<TextView>(R.id.camera_info)?.text =
-            DeviceInfoUtil.getCamera()
+            DeviceInfoUtil.getCamera(bannerPreference.context)
         bannerPreference.findViewById<TextView>(R.id.display_info)?.text =
             DeviceInfoUtil.getScreenResolution(mContext)
         bannerPreference.findViewById<TextView>(R.id.battery_info)?.text =
