@@ -199,6 +199,7 @@
                 android:textSize="14sp"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textStyle="bold"
+                android:text="@string/device_processor_info"
                 android:layout_marginBottom="9dp" />
 
             <!-- RAM Info -->
@@ -235,6 +236,7 @@
                 android:textSize="14sp"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textStyle="bold"
+                android:text="@string/device_camera_info"
                 android:layout_marginBottom="9dp" />
 
             <!-- Battery Info -->

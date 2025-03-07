@@ -49,7 +49,7 @@
     <string name="device_camera_title">Camera</string>
     <string name="device_front_camera">Front</string>
     <string name="device_rear_camera">Rear</string>
-    <string name="unknown">Unknown</string>
+    <string name="device_unknown">Unknown</string>
     <string name="device_main_camera">Main</string>
     <string name="device_wide_camera">Wide</string>
     <string name="device_ultra_high_res">Ultra High-Res</string>
