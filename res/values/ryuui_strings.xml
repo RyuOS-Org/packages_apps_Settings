@@ -51,5 +51,7 @@
     <string name="device_battery_title">Battery</string>
     <string name="device_display_title">Display</string>
     <string name="device_not_available">Not available</string>
+    <string name="device_processor_info">@string/device_unknown</string>
+    <string name="device_camera_info">@string/device_not_available</string>
 
 </resources>
