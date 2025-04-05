@@ -56,7 +56,8 @@
         android:key="ryu_maintainer"
         android:title="@string/ryu_maintainer_title"
         android:summary="@string/ryu_maintainer_summary"
-        settings:enableCopying="true"/>
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.RyuMaintainerPreferenceController"/>
 
     <!-- Mainline module version
     <Preference
