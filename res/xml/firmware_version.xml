@@ -21,10 +21,10 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- The Clover Project logo-->
+    <!-- Ryu-UI logo-->
     <com.android.settingslib.widget.LayoutPreference
-        android:key="clover_logo"
-        android:layout="@layout/clover_logo"
+        android:key="ryu_logo"
+        android:layout="@layout/ryu_logo"
         android:selectable="false"/>
 
     <!-- Android version -->
@@ -36,13 +36,13 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
-    <!-- Clover version -->
+    <!-- Ryu-UI version -->
     <Preference
-        android:key="clover_firmware_version"
-        android:title="@string/clover_firmware_version"
+        android:key="ryu_firmware_version"
+        android:title="@string/ryu_firmware_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.CloverFirmwareVersionPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.RyuFirmwareVersionPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
@@ -51,11 +51,11 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
 
-    <!-- Clover Project Maintainer -->
+    <!-- Ryu-UI Maintainer -->
     <Preference
-        android:key="clover_maintainer"
-        android:title="@string/clover_maintainer_title"
-        android:summary="@string/clover_maintainer_summary"
+        android:key="ryu_maintainer"
+        android:title="@string/ryu_maintainer_title"
+        android:summary="@string/ryu_maintainer_summary"
         settings:enableCopying="true"/>
 
     <!-- Mainline module version

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2024 The Clover Project
+ * Copyright (C) 2025 Ryu-UI Org
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,15 +30,15 @@ import androidx.preference.Preference;
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 
-public class CloverFirmwareVersionPreferenceController extends BasePreferenceController {
+public class RyuFirmwareVersionPreferenceController extends BasePreferenceController {
 
-    private static final String TAG = "CloverFirmwareVersion";
-    private static final String VERSION_PROPERTY = "ro.clover.display.version";
-    private static final String CLOVER_BUILDTYPE = "ro.clover.releasetype";
-    
+    private static final String TAG = "RyuFirmwareVersion";
+    private static final String VERSION_PROPERTY = "ro.ryu.display.version";
+    private static final String RYU_BUILDTYPE = "ro.ryu.releasetype";
+
     private final PackageManager mPackageManager;
 
-    public CloverFirmwareVersionPreferenceController(Context context, String preferenceKey) {
+    public RyuFirmwareVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
         mPackageManager = mContext.getPackageManager();
     }
@@ -50,13 +51,13 @@ public class CloverFirmwareVersionPreferenceController extends BasePreferenceCon
     @Override
     public CharSequence getSummary() {
         String getVer = SystemProperties.get(VERSION_PROPERTY);
-        String getType = SystemProperties.get(CLOVER_BUILDTYPE);
+        String getType = SystemProperties.get(RYU_BUILDTYPE);
         if (!getVer.isEmpty() && !getType.isEmpty())
             return getVer + " | " + getType;
-        else 
+        else
             return mContext.getString(R.string.device_info_default);
     }
-    
+
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
         if (!TextUtils.equals(preference.getKey(), getPreferenceKey())) {
@@ -65,7 +66,7 @@ public class CloverFirmwareVersionPreferenceController extends BasePreferenceCon
 
         final Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(mContext.getString(R.string.clover_github_uri)));
+        intent.setData(Uri.parse(mContext.getString(R.string.ryu_github_uri)));
         if (mPackageManager.queryIntentActivities(intent, 0).isEmpty()) {
             // Don't send out the intent to stop crash
             Log.w(TAG, "queryIntentActivities() returns empty");

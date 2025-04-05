@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 Ryu-UI Org
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Debugging sebagai root</string>
+    <string name="adb_enable_summary_root">Memungkinkan menjalankan debugging Android sebagai root</string>
+
+    <!-- Maintainer -->
+    <string name="ryu_maintainer">Pengelola perangkat</string>
+    <string name="ryu_maintainer_title">@string/ryu_maintainer</string>
+    <string name="ryu_maintainer_summary">Tidak diketahui</string>
+
+    <!-- Auto pin confirm -->
+    <string name="lock_screen_auto_pin_confirm_summary_custom">Buka kunci secara otomatis jika Anda memasukkan PIN yang benar. Ini sedikit kurang aman dibandingkan dengan mengetuk Enter untuk mengonfirmasi.</string>
+
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">Refresh rate</string>
+    <string name="refresh_rate_summary_vrr_off">%d Hz</string>
+    <string name="refresh_rate_summary_vrr_on">%d Hz (Adaptif)</string>
+    <string name="refresh_rate_vrr_title">Refresh rate adaptif</string>
+    <string name="refresh_rate_vrr_summary">Secara otomatis menurunkan kecepatan refresh rate saat layar dalam keadaan diam, untuk menghemat daya. Dapat menyebabkan kedipan atau pergeseran warna pada tampilan tertentu</string>
+    <string name="refresh_rate_footer">Refresh rate yang lebih tinggi membuat tampilan menjadi lebih mulus, tetapi meningkatkan konsumsi daya</string>
+    <string name="keywords_refresh_rate">refresh, rate, smooth, peak, 60hz, 90hz, 120hz, 144hz, 165hz</string>
+
+    <!-- Heads up -->
+    <string name="heads_up_title">Heads up</string>
+    <string name="heads_up_summary">Menampilkan pemberitahuan tertentu sebagai banner di bagian atas layar</string>
+    <string name="heads_up_off">Heads up dinonaktifkan secara global</string>
+
+    <!-- Location settings screen, setting check box label if Assisted GPS should be enabled -->
+    <string name="assisted_gps">Gunakan assisted GPS</string>
+    <!-- Location settings screen, setting summary for Assisted GPS switch -->
+    <string name="assisted_gps_summary">Unduh data bantuan satelit dari internet yang dapat meningkatkan kinerja pengaktifan GPS secara signifikan. Untuk panggilan darurat, assisted GPS selalu diperbolehkan.</string>
+
+    <!-- Battery saver refresh rate -->
+    <string name="battery_saver_refresh_rate_title">Mengurangi kecepatan refresh rate</string>
+    <string name="battery_saver_refresh_rate_summary">Menggunakan kecepatan refresh rate 60 Hz untuk menghemat daya saat Penghemat Baterai aktif</string>
+
+    <!-- Warning message for the sd card setup -->
+    <string name="storage_warning_internal">Peringatan: Opsi ini mungkin tidak berfungsi dengan baik atau menyebabkan hilangnya data dan oleh karena itu tidak disarankan!</string>
+
+    <!-- Copy to clipboard -->
+    <string name="copied_to_clipboard">Disalin ke papan klip</string>
+    <string name="longpress_to_clipboard">Tekan lama untuk menyalin</string>
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Info radio</string>
+
+    <!-- Charging control settings -->
+    <string name="charging_control_title">Kontrol pengisian daya</string>
+    <string name="charging_control_summary">Sesuaikan jadwal pengisian daya dan batas untuk baterai</string>
+    <string name="charging_control_enable_title">Aktifkan kontrol pengisian daya</string>
+    <string name="charging_control_mode_title">Mode mengisi daya</string>
+    <string name="charging_control_mode_auto_title">Jadwal otomatis</string>
+    <string name="charging_control_mode_auto_summary">Secara otomatis menentukan waktu untuk mulai mengisi daya berdasarkan alarm yang disetel</string>
+    <string name="charging_control_mode_custom_title">Kustomisasi daya</string>
+    <string name="charging_control_mode_custom_summary">Menetapkan waktu target untuk pengisian penuh</string>
+    <string name="charging_control_mode_limit_title">Batasi pengisian daya</string>
+    <string name="charging_control_mode_limit_summary">Membatasi pengisian daya hingga persentase tertentu</string>
+    <string name="charging_control_start_time_title">Waktu mulai</string>
+    <string name="charging_control_start_time_summary">Kontrol pengisian daya diaktifkan saat Anda mulai mengisi daya setelah %s</string>
+    <string name="charging_control_target_time_title">Target waktu untuk mengisi daya penuh</string>
+    <string name="charging_control_target_time_summary">Baterai akan terisi penuh dalam %s</string>
+    <string name="charging_control_limit_title">Batas</string>
+    <string name="reset">Reset</string>
+
+    <!-- LiveDisplay -->
+    <string name="live_display_summary">Optimalkan layar Anda berdasarkan waktu dan kondisi sekitar untuk meningkatkan keterbacaan dan mengurangi kelelahan mata</string>
+    <string name="live_display_mode">Mode tampilan</string>
+    <string name="live_display_color_temperature_title">Temperatur warna</string>
+    <string name="live_display_color_temperature_summary">Siang hari: <xliff:g id="day_temperature">%1$d</xliff:g>K  Malam: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Siang hari</string>
+    <string name="live_display_night">Malam hari</string>
+    <string name="live_display_outdoor_mode_title">Mode luar ruangan otomatis</string>
+    <string name="live_display_outdoor_mode_summary">Meningkatkan kecerahan dan saturasi secara otomatis di bawah sinar matahari yang cerah</string>
+    <string name="live_display_anti_flicker_title">Anti flicker</string>
+    <string name="live_display_anti_flicker_summary">Mencegah kerlipan yang ekstensif dan mengurangi kelelahan mata pada kondisi cahaya redup. Hal ini dapat menurunkan akurasi warna dan memengaruhi cara beberapa item ditampilkan</string>
+    <string name="live_display_low_power_title">Kurangi konsumsi daya</string>
+    <string name="live_display_low_power_summary">Menyesuaikan tampilan untuk konsumsi daya terendah tanpa degradasi</string>
+    <string name="live_display_enhance_color_title">Tingkatkan warna</string>
+    <string name="live_display_enhance_color_summary">Meningkatkan vibrasi warna nada tampilan, pemandangan, dan gambar lainnya</string>
+    <string name="live_display_color_profile_title">Profil warna</string>
+    <string name="live_display_color_profile_standard_title">Standard</string>
+    <string name="live_display_color_profile_standard_summary">Warna yang akurat dan warna putih yang cerah</string>
+    <string name="live_display_color_profile_natural_title">Natural</string>
+    <string name="live_display_color_profile_natural_summary">Warna dan nada tampilan yang realistis</string>
+    <string name="live_display_color_profile_dynamic_title">Dinamis</string>
+    <string name="live_display_color_profile_dynamic_summary">Warna-warna yang disempurnakan dan warna putih yang cerah</string>
+    <string name="live_display_color_profile_cinema_title">Cinema</string>
+    <string name="live_display_color_profile_cinema_summary">Reproduksi warna yang sempurna untuk video</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomi</string>
+    <string name="live_display_color_profile_astronomy_summary">Merah tua untuk mempertahankan penglihatan malam hari</string>
+    <string name="live_display_color_profile_photography_title">Fotografi</string>
+    <string name="live_display_color_profile_photography_summary">Reproduksi warna yang sempurna untuk foto</string>
+    <string name="live_display_color_profile_basic_title">Basic</string>
+    <string name="live_display_color_profile_basic_summary">Menggunakan layar yang tidak dikalibrasi</string>
+    <string name="live_display_color_profile_adaptive_title">Adaptif</string>
+    <string name="live_display_color_profile_adaptive_summary">Warna beradaptasi dengan kondisi sekitar</string>
+    <string name="live_display_color_profile_reading_title">Membaca</string>
+    <string name="live_display_color_profile_reading_summary">Warna yang lebih hangat untuk mengurangi kelelahan pada mata</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Warna yang akurat untuk ruang warna sRGB</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Warna yang akurat untuk ruang warna DCI-P3</string>
+    <string name="live_display_reading_mode_title">Mode membaca</string>
+    <string name="live_display_reading_mode_summary">Mode abu-abu untuk pembacaan jangka panjang</string>
+    <string name="color_calibration_title">Kalibrasi warna</string>
+    <string name="color_calibration_summary">Mengkalibrasi warna di layar</string>
+    <string name="color_red_title">Merah</string>
+    <string name="color_green_title">Hijau</string>
+    <string name="color_blue_title">Biru</string>
+
+    <!-- LiveDisplay : Picture Adjustment -->
+    <string name="picture_adjustment_title">Penyesuaian gambar</string>
+    <string name="picture_adjustment_summary">Menyesuaikan rona, saturasi, intensitas, dan kontras</string>
+    <string name="adj_hue_title">Rona warna</string>
+    <string name="adj_saturation_title">Saturasi</string>
+    <string name="adj_intensity_title">Intensitas</string>
+    <string name="adj_contrast_title">Kontras</string>
+
+    <!-- High touch sensitivity -->
+    <string name="high_touch_sensitivity_title">Sensitivitas sentuhan tinggi</string>
+    <string name="high_touch_sensitivity_summary">Meningkatkan sensitivitas layar sentuh agar dapat digunakan sewaktu mengenakan sarung tangan</string>
+
+    <!-- Touchscreen hovering -->
+    <string name="touchscreen_hovering_title">Touchscreen hovering</string>
+    <string name="touchscreen_hovering_summary">Memungkinkan Anda melayang di layar seperti mouse di web, desktop jarak jauh, dsb</string>
+
+    <!-- High touch polling rate -->
+    <string name="high_touch_polling_rate_title">High touch polling rate</string>
+    <string name="high_touch_polling_rate_summary">Increase touchscreen polling rate</string>
+
+    <!-- FastCharge feature -->
+    <string name="fast_charging_title">Pengisian daya cepat</string>
+    <string name="fast_charging_summary">Nonaktifkan untuk mengurangi panas yang dihasilkan oleh perangkat saat mengisi daya atau untuk memperpanjang masa pakai baterai</string>
+
+    <!-- Black theme for dark mode -->
+    <string name="berry_black_theme_title">Hitam murni</string>
+    <string name="berry_black_theme_summary">Latar belakang hitam murni untuk tema gelap</string>
+
+    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
+    <string name="duration_less_than_one_minute">Kurang dari 1 Menit</string>
+    <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
+    <string name="screen_time_summary_usage_today">%1$s hari ini</string>
+
+    <!-- Cycle through ringer modes gesture -->
+    <string name="prevent_ringing_option_cycle">Cycle through modes</string>
+    <string name="prevent_ringing_option_cycle_summary">On (cycle through modes)</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Geser untuk mengambil tangkapan layar</string>
+    <string name="three_finger_gesture_summary">Geser ke bawah dengan tiga jari untuk mengambil tangkapan layar</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Secara otomatis beralih antara 5G dan 4G untuk mengurangi konsumsi baterai</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">Senter cepat</string>
+    <string name="power_button_torch_summary">Saat layar mati, menekan lama tombol daya akan mengaktifkan senter</string>
+
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Suara tangkapan layar</string>
+
+    <!-- Advanced sound settings -->
+    <string name="sound_settings_advanced_title">Suara tambahan</string>
+
+    <!-- Power menu on secure lockscreen -->
+    <string name="lockscreen_enable_power_menu_title">Menu daya</string>
+    <string name="lockscreen_enable_power_menu_summary">Izinkan mengakses menu daya di layar kunci</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_state_title">Indikator lalu lintas jaringan</string>
+    <string name="network_traffic_state_summary">Mengaktifkan atau menonaktifkan indikator kecepatan jaringan pada bilah status</string>
+    <string name="network_traffic_title">Indikator lalu lintas jaringan</string>
+    <string name="network_traffic_master_switch_title">Menggunakan Indikator Lalu Lintas Jaringan</string>
+    <string name="network_options_title">Opsi</string>
+    <string name="network_traffic_autohide_title">Menyembunyikan indikator lalu lintas jaringan jika tidak aktif</string>
+
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Opsi getar dalam panggilan</string>
+    <string name="incall_vibrate_connect_title">Getar saat terhubung</string>
+    <string name="incall_vibrate_call_wait_title">Getar saat menunggu panggilan</string>
+    <string name="incall_vibrate_disconnect_title">Getar saat sambungan terputus</string>
+
+    <!-- Hotspot -->
+    <string name="wifi_hotspot_hidden_ssid_title">Jaringan tersembunyi</string>
+    <string name="wifi_hotspot_hidden_ssid_summary">Nama hotspot seluler Anda tidak akan muncul dalam daftar jaringan WLAN yang tersedia.</string>
+    <string name="wifi_hotspot_client_manager_title">Perangkat yang tersambung</string>
+    <string name="wifi_hotspot_client_manager_summary">Daftar dan kelola perangkat yang tersambung ke hotspot</string>
+    <string name="wifi_hotspot_client_manager_list_only_summary">Daftar perangkat yang tersambung ke hotspot</string>
+    <string name="wifi_hotspot_client_limit_title">Batas perangkat yang terhubung</string>
+    <string name="wifi_hotspot_blocked_clients_list_title">Perangkat yang Diblokir</string>
+    <string name="wifi_hotspot_connected_clients_list_title">Perangkat yang Terhubung</string>
+    <string name="wifi_hotspot_block_client_dialog_title">Blokir perangkat</string>
+    <string name="wifi_hotspot_block_client_dialog_text">Tindakan ini akan memutuskan koneksi ke \"<xliff:g id="device_name">%1$s</xliff:g>\" dari perangkat ini dan menambahkannya ke daftar blokir</string>
+    <string name="wifi_hotspot_unblock_client_dialog_title">Buka blokir perangkat</string>
+    <string name="wifi_hotspot_unblock_client_dialog_text">Perangkat \"<xliff:g id="device_name">%1$s</xliff:g>\" akan dapat tersambung ke hotspot ini</string>
+    <string name="wifi_hotspot_client_manager_footer_text">Tidak ada klien yang tersedia saat ini. Perangkat yang tersambung dan diblokir akan dicantumkan di sini jika tersedia.</string>
+
+    <!-- Hotspot extras -->
+    <string name="tethering_allow_vpn_upstreams_title">Izinkan klien menggunakan VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Izinkan klien hotspot untuk menggunakan koneksi VPN perangkat ini untuk konektivitas upstream</string>
+
+    <!-- One shot automatic brightness -->
+    <string name="auto_brightness_one_shot_title">Kecerahan otomatis satu jepretan</string>
+    <string name="auto_brightness_one_shot_summary">Penyesuaian kecerahan hanya akan dilakukan pada saat layar dinyalakan</string>
+
+    <!-- Double tap to sleep on status bar or lockscreen -->
+    <string name="status_bar_double_tap_to_sleep_title">Ketuk untuk tidur</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Ketuk dua kali di bilah status atau layar kunci untuk mematikan layar</string>
+
+     <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Aktifkan advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Memperlihatkan pilihan untuk recovery dan bootloader di menu daya</string>
+
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Kontrol pemutaran</string>
+    <string name="volume_button_music_control_summary">Saat layar mati, menekan lama tombol volume akan melompati trek musik</string>
+
+    <!-- Display : Rotation -->
+    <string name="display_rotation_title">Pengaturan rotasi</string>
+    <string name="display_rotation_enabled">Rotasi otomatis diaktifkan</string>
+    <string name="display_rotation_disabled">Rotasi otomatis dinonaktifkan</string>
+    <string name="display_rotation_unit">derajat</string>
+    <string name="display_rotation_category_title">Mode rotasi</string>
+    <string name="display_rotation_0_title">0 derajat</string>
+    <string name="display_rotation_90_title">90 derajat</string>
+    <string name="display_rotation_180_title">180 derajat</string>
+    <string name="display_rotation_270_title">270 derajat</string>
+
+    <!-- Ambient wake toggles -->
+    <string name="doze_gesture_ambient_title">Tampilkan Ambien</string>
+    <string name="doze_gesture_ambient_summary">Tampilkan Tampilan Ambien alih-alih membangunkan layar secara penuh</string>
+    <string name="gesture_wake_ambient">Tampilkan Ambien</string>
+    <string name="gesture_wake">Bangunkan secara penuh</string>
+
+    <!-- Doze enablement -->
+    <string name="doze_enabled_title">Tampilan ambien</string>
+    <string name="doze_enabled_summary">Mengaktifkan fungsionalitas paket doze</string>
+
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Ikon bilah status</string>
+    <string name="icon_manager_summary">Mengontrol visibilitas ikon bilah status</string>
+
+    <!-- Additional settings category -->
+    <string name="additional_settings_category_title">Pengaturan Tambahan</string>
+
+    <!-- Ignore window secure -->
+    <string name="ignore_window_secure_title">Ignore window secure flags</string>
+    <string name="ignore_window_secure_summary">Hapus batasan tangkapan layar dan rekam layar untuk semua aplikasi. Hal ini dapat memudahkan dalam beberapa kasus, namun dapat menyebabkan kebocoran privasi.</string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="search">Pencarian</string>
+    <string name="search_apps">Pencarian aplikasi</string>
+    <string name="display_cutout_force_fullscreen_title">Aplikasi layar penuh</string>
+    <string name="display_cutout_force_fullscreen_summary">Paksa aplikasi untuk mengabaikan ruang notch</string>
+    <string name="application_icon">Ikon aplikasi</string>
+
+    <!-- Preference and settings suggestion title text for screen off UDFPS [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title">Sidikjari Selalu Aktif</string>
+    <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
+    <string name="ambient_display_screen_off_udfps_summary">Memungkinkan membuka kunci saat layar mati. \Pengaktifan dapat menyebabkan terbangunnya layar secara tidak sengaja.</string>
+
+    <!-- Access QS on lockscreen -->
+    <string name="show_qs_on_secure_keyguard_title">Pengaturan cepat</string>
+    <string name="show_qs_on_secure_keyguard_summary">Memungkinkan pengalihan pengaturan cepat pada layar kunci</string>
+
+    <!-- Private DNS -->
+    <!-- AdGuard DNS Option -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+    <!-- Cloudflare DNS Option -->
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+    <!-- AdGuard DNS hostname -->
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
+    <!-- Cloudflare DNS hostname -->
+    <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
+
+    <!-- Data disabled icon -->
+    <string name="data_disabled_icon_title">Tampilkan ikon data dinonaktifkan</string>
+    <string name="data_disabled_icon_summary">Tampilkan tanda silang di samping bilah sinyal saat data dinonaktifkan</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Ikon 4G</string>
+    <string name="show_fourg_icon_summary">Tampilkan ikon 4G di ikon sinyal sebagai pengganti LTE</string>
+
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca">Paksa LTE CA</string>
+    <string name="force_lte_ca_summary">Paksakan agregasi pembawa LTE untuk bekerja</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Gaya status baterai</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikon potret</string>
+    <string name="status_bar_battery_style_circle">Lingkaran</string>
+    <string name="status_bar_battery_style_text">Teks</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Persentase baterai</string>
+    <string name="status_bar_battery_percentage_default">Tersembunyi</string>
+    <string name="status_bar_battery_percentage_text_inside">Di dalam ikon</string>
+    <string name="status_bar_battery_percentage_text_next">Di sebelah ikon</string>
+
+    <!-- Adaptive Playback -->
+    <string name="adaptive_playback_screen_title">Jeda Cerdas</string>
+    <string name="adaptive_playback_enabled">Menggunakan Jeda Cerdas</string>
+    <string name="adaptive_playback_disabled_summary">Nonaktif</string>
+    <string name="adaptive_playback_intro_text">Secara otomatis menghentikan media saat volume dimatikan dan akan melanjutkan secara otomatis saat volume dipulihkan dalam waktu yang ditetapkan.</string>
+    <string name="adaptive_playback_timeout_title">Gunakan batas waktu</string>
+    <string name="adaptive_playback_timeout_none">Tanpa batas waktu</string>
+    <string name="adaptive_playback_timeout_none_summary">Aktif (tanpa batas waktu)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 detik</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Aktif (30 detik)</string>
+    <string name="adaptive_playback_timeout_1_min">1 menit</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Aktif (1 menit)</string>
+    <string name="adaptive_playback_timeout_2_min">2 menit</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Aktif (2 menit)</string>
+    <string name="adaptive_playback_timeout_5_min">5 menit</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Aktif (5 menit)</string>
+    <string name="adaptive_playback_timeout_10_min">10 menit</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Aktif (10 menit)</string>
+
+    <!-- App lock -->
+    <string name="app_lock_title">Kunci aplikasi</string>
+    <plurals name="app_lock_summary">
+        <item quantity="one"><xliff:g example="1" id="Number of applications">%1$d</xliff:g> aplikasi diproteksi</item>
+        <item quantity="other"><xliff:g example="10" id="Number of applications">%1$d</xliff:g> aplikasi dilindungi</item>
+    </plurals>
+    <string name="app_lock_authentication_dialog_title">Buka kunci</string>
+    <string name="enable_debugging">Aktifkan debugging</string>
+    <string name="disable_debugging">Nonaktifkan debugging</string>
+    <string name="app_lock_packages_title">Aplikasi yang dilindungi</string>
+    <string name="app_lock_packages_summary">Pilih aplikasi yang akan dilindungi dengan biometrik atau kredensial perangkat</string>
+    <string name="app_lock_timeout_title">Batas waktu penguncian otomatis</string>
+    <string name="app_lock_timeout_summary">Durasi waktu yang diperlukan untuk mengunci aplikasi yang tidak terkunci di latar belakang</string>
+    <string name="app_lock_notifications_title">Hapus notifikasi</string>
+    <string name="app_lock_notifications_summary">Konten pemberitahuan akan disembunyikan dan diciutkan untuk aplikasi tertentu saat dikunci. Pemberitahuan di setelan cepat akan dinonaktifkan secara otomatis.</string>
+    <string name="app_lock_notifications_disabled_summary">Lindungi aplikasi terlebih dahulu</string>
+    <string name="app_lock_biometrics_allowed_title">Aktifkan biometrik untuk membuka kunci</string>
+    <string name="app_lock_footer_text">Bubbles secara otomatis akan ditutup setelah batas waktu habis</string>
+    <string name="enable_protection">Aktifkan proteksi</string>
+    <string name="hide_from_launcher_title">Sembunyikan dari peluncur</string>
+    <string name="hide_from_launcher_summary">Mencegah aplikasi ini muncul di peluncur mana pun. Memerlukan restart ulang peluncur agar perubahan diterapkan. </string>
+    <string name="custom_timeout_summary_5secs">5 detik</string>
+    <string name="custom_timeout_summary_10secs">10 detik</string>
+    <string name="custom_timeout_summary_30secs">30 detik</string>
+    <string name="custom_timeout_summary_1min">1 menit</string>
+    <string name="custom_timeout_summary_5mins">5 menit</string>
+    <string name="custom_timeout_summary_10mins">10 menit</string>
+    <string name="custom_timeout_summary_30mins">30 menit</string>
+
+    <!-- Doze on double tap -->
+    <string name="double_tap_title">Tidur dengan ketukan dua kali</string>
+    <string name="doze_double_tap_title">Ketuk dua kali untuk mengecek ponsel</string>
+    <string name="doze_double_tap_summary">Tampilkan pulse dengan ketukan dua kali</string>
+
+    <!-- Label for a numbered SIM card.  [CHAR LIMIT=40] -->
+    <string name="sim_card_number_title" translatable="false">SIM <xliff:g id="card_number">%1$d</xliff:g></string>
+
+    <!-- Battery Info: Technology -->
+    <string name="battery_technology">Teknologi</string>
+    <string name="battery_technology_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Health -->
+    <string name="battery_health">Kesehatan</string>
+    <string name="battery_health_good">Baik</string>
+    <string name="battery_health_overheat">Panas berlebihan</string>
+    <string name="battery_health_dead">Mati</string>
+    <string name="battery_health_over_voltage">Tegangan berlebih</string>
+    <string name="battery_health_unspecified_failure">Error tidak diketahi</string>
+    <string name="battery_health_cold">Dingin</string>
+    <string name="battery_health_unknown">Tidak diketahui</string>
+
+    <!-- Battery Info: Temperature -->
+    <string name="battery_temperature">Suhu</string>
+    <string name="battery_temperature_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Voltage -->
+    <string name="battery_voltage">Tegangan</string>
+    <string name="battery_voltage_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Charge Counter -->
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+
+    <!-- Battery Info: Design Capacity -->
+    <string name="battery_design_capacity">Kapasitas desain</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <string name="battery_design_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Maximum Capacity -->
+    <string name="battery_maximum_capacity">Kapasitas maksimum</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
+    <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+</resources>

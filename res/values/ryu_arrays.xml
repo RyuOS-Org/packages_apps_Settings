@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2024-2025 The Clover Project
+     Copyright (C) 2025 Ryu-UI Org
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,7 +32,7 @@
     <string-array name="charging_control_mode_entries_fine_grained_control" translatable="false">
         <item>@string/charging_control_mode_limit_title</item>
     </string-array>
-    
+
     <string-array name="charging_control_mode_values_fine_grained_control" translatable="false">
         <item>3</item>
     </string-array>
@@ -42,19 +43,19 @@
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_text</item>
     </string-array>
-    
+
     <string-array name="status_bar_battery_style_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
     </string-array>
-    
+
     <string-array name="status_bar_battery_percentage_entries" translatable="false">
         <item>@string/status_bar_battery_percentage_default</item>
         <item>@string/status_bar_battery_percentage_text_inside</item>
         <item>@string/status_bar_battery_percentage_text_next</item>
     </string-array>
-    
+
     <string-array name="status_bar_battery_percentage_values" translatable="false">
         <item>0</item>
         <item>1</item>
@@ -71,7 +72,7 @@
         <item>@string/custom_timeout_summary_10mins</item>
         <item>@string/custom_timeout_summary_30mins</item>
     </string-array>
-    
+
     <string-array name="app_lock_timeout_values" translatable="false">
         <item>5000</item>
         <item>10000</item>

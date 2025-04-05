@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (c) 2024-2025 The Clover Project
+     Copyright (C) 2025 Ryu-UI Org
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
           http://www.apache.org/licenses/LICENSE-2.0
-          
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,9 +22,9 @@
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 
     <!-- Maintainer -->
-    <string name="clover_maintainer">Device Maintainer</string>
-    <string name="clover_maintainer_title">@string/clover_maintainer</string>
-    <string name="clover_maintainer_summary">Unknown</string>
+    <string name="ryu_maintainer">Device Maintainer</string>
+    <string name="ryu_maintainer_title">@string/ryu_maintainer</string>
+    <string name="ryu_maintainer_summary">Unknown</string>
 
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
@@ -125,7 +126,7 @@
     <string name="color_red_title">Red</string>
     <string name="color_green_title">Green</string>
     <string name="color_blue_title">Blue</string>
-    
+
     <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Picture adjustment</string>
     <string name="picture_adjustment_summary">Adjust hue, saturation, intensity, and contrast</string>
@@ -149,13 +150,13 @@
     <!-- FastCharge feature -->
     <string name="fast_charging_title">Fast charging</string>
     <string name="fast_charging_summary">Disable to reduce the heat produced by the device while charging or to extend the lifespan of the battery</string>
-    
+
     <!-- Black theme for dark mode -->
     <string name="berry_black_theme_title">Pure black</string>
     <string name="berry_black_theme_summary">Pure black background for dark theme</string>
 
-    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] --> 
-    <string name="duration_less_than_one_minute">Less than 1 Minute</string> 
+    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
+    <string name="duration_less_than_one_minute">Less than 1 Minute</string>
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
     <string name="screen_time_summary_usage_today">%1$s today</string>
 
@@ -299,7 +300,7 @@
     <!-- 4G icon -->
     <string name="show_fourg_icon_title">4G icon</string>
     <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
-    
+
     <!-- Force LTE_CA -->
     <string name="force_lte_ca">Force LTE CA</string>
     <string name="force_lte_ca_summary">Force LTE carrier aggregation to work</string>
@@ -309,7 +310,7 @@
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_text">Text</string>
-    
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Battery percentage</string>
     <string name="status_bar_battery_percentage_default">Hidden</string>
@@ -406,5 +407,5 @@
     <string name="battery_maximum_capacity">Maximum capacity</string>
     <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
     <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
-  
+
 </resources>

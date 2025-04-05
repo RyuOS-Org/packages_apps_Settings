@@ -29,7 +29,7 @@ import androidx.preference.Preference
 import androidx.preference.forEach
 
 import com.android.internal.logging.nano.MetricsProto
-import com.android.internal.util.clover.CloverUtils
+import com.android.internal.util.ryu.RyuUtils
 
 import com.android.settings.R
 import com.android.settings.core.SubSettingLauncher
@@ -55,7 +55,7 @@ class AppLockPackageListFragment : DashboardFragment() {
         super.onAttach(context)
         appLockManager = context.getSystemService(AppLockManager::class.java)!!
         pm = context.packageManager
-        launchablePackages = CloverUtils.launchablePackages(context)
+        launchablePackages = RyuUtils.launchablePackages(context)
         whiteListedPackages = resources.getStringArray(
             com.android.internal.R.array.config_appLockAllowedSystemApps)
     }
@@ -140,7 +140,7 @@ class AppLockPackageListFragment : DashboardFragment() {
         }
     }
 
-    override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.CLOVER
+    override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.RYU
 
     override protected fun getPreferenceScreenResId() = R.xml.app_lock_package_list_settings
 

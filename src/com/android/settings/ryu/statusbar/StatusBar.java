@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.clover.statusbar;
+package com.android.settings.ryu.statusbar;
 
 import android.app.Activity;
 import android.content.Context;
@@ -99,7 +99,7 @@ public class StatusBar extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CLOVER;
+        return MetricsProto.MetricsEvent.RYU;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

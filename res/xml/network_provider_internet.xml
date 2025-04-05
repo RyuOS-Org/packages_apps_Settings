@@ -110,7 +110,7 @@
         android:title="@string/network_traffic_state_title"
         android:summary="@string/network_traffic_state_summary"
         android:order="25"
-        android:fragment="com.android.settings.clover.networktraffic.NetworkTrafficSettings"
+        android:fragment="com.android.settings.ryu.networktraffic.NetworkTrafficSettings"
         android:defaultValue="false" />
 
     <Preference

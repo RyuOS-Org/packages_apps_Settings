@@ -67,5 +67,5 @@
         android:title="@string/berry_black_theme_title"
         android:summary="@string/berry_black_theme_summary"
         android:defaultValue="false"
-        settings:requiresPackage="com.clover.overlay.customization.blacktheme" />
+        settings:requiresPackage="com.ryu.overlay.customization.blacktheme" />
 </PreferenceScreen>

@@ -1,4 +1,4 @@
-package com.android.settings.clover.networktraffic;
+package com.android.settings.ryu.networktraffic;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -90,7 +90,7 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment implement
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CLOVER;
+        return MetricsProto.MetricsEvent.RYU;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

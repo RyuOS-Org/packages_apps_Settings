@@ -3215,9 +3215,9 @@
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="firmware_version">Android version</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
-    <string name="clover_firmware_version">Clover version</string>
+    <string name="ryu_firmware_version">Ryu-UI version</string>
     <!-- About phone screen, status item URI    [CHAR LIMIT=40] -->
-    <string name="clover_github_uri" translatable="false">https://github.com/The-Clover-Project</string>
+    <string name="ryu_github_uri" translatable="false">https://github.com/RyuUI-Org</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
     <string name="security_patch">Android security update</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
