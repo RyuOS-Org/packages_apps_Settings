@@ -24,7 +24,7 @@
     <!-- Ryu-UI logo-->
     <com.android.settingslib.widget.LayoutPreference
         android:key="ryu_logo"
-        android:layout="@layout/ryu_logo"
+        android:layout="@layout/ryu_banner"
         android:selectable="false"/>
 
     <!-- Android version -->
