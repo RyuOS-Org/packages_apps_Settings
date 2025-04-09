@@ -28,6 +28,13 @@
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_custom">Buka kunci secara otomatis jika Anda memasukkan PIN yang benar. Ini sedikit kurang aman dibandingkan dengan mengetuk Enter untuk mengonfirmasi.</string>
 
+    <!-- Bypass charging -->
+    <string name="bypass_charge_title">Bypass charging</string>
+    <string name="bypass_charge_summary">Blokir pengisian daya untuk menjaga kesehatan baterai saat perangkat tetap terhubung ke sumber daya dalam waktu lama</string>
+    <string name="bypass_charge_summary_off">Nonaktif</string>
+    <string name="bypass_charge_summary_on">Aktif</string>
+    <string name="menu_key_battery">Baterai</string>
+
     <!-- Refresh rate -->
     <string name="refresh_rate_title">Refresh rate</string>
     <string name="refresh_rate_summary_vrr_off">%d Hz</string>

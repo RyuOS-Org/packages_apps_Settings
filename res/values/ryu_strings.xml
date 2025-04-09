@@ -29,6 +29,13 @@
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
 
+    <!-- Bypass charging -->
+    <string name="bypass_charge_title">Bypass charging</string>
+    <string name="bypass_charge_summary">Block charging to maintain battery health when the device remains connected to a power source for a long time</string>
+    <string name="bypass_charge_summary_off">Bypass Charging is disabled</string>
+    <string name="bypass_charge_summary_on">Bypass Charging is enabled</string>
+    <string name="menu_key_battery">Battery</string>
+
     <!-- Refresh rate -->
     <string name="refresh_rate_title">Refresh rate</string>
     <string name="refresh_rate_summary_vrr_off">%d Hz</string>
