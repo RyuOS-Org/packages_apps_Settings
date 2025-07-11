@@ -21,6 +21,11 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="ryuos_banner"
+        android:layout="@layout/ryuos_banner"
+        android:selectable="false"/>
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"

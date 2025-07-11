@@ -93,5 +93,7 @@
 
     <!-- Keyboard a11y input dialog -->
     <color name="input_dialog_slider_progress">@android:color/system_on_primary_container_dark</color>
+
+    <color name="bg_card_banner">@android:color/system_neutral1_800</color>
 </resources>
 
