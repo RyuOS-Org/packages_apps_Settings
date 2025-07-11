@@ -10,15 +10,15 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
-    <string name="maintainer">Maintainer</string>
-    
+    <string name="maintainer">Pengelola</string>
+
     <!-- SELinux Status -->
-    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status">Status SELinux</string>
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
 
     <!-- RyuOS Version -->
-    <string name="ryuos_version">RyuOS version</string>
+    <string name="ryuos_version">Versi RyuOS</string>
 
 </resources>

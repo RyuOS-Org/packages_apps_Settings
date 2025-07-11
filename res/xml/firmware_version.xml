@@ -35,6 +35,14 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+     <!-- RyuOS version -->
+    <Preference
+        android:key="ryuos_version"
+        android:title="@string/ryuos_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.ryuos.RyuOSVersionPreferenceController"/>
+
     <!-- RyuOS maintainer -->
     <Preference
         android:key="ryuos_maintainer"
