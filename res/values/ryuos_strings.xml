@@ -11,7 +11,10 @@
     <string name="backup_transport_title">Select backup provider</string>
 
     <string name="maintainer">Maintainer</string>
-    
+
+    <!-- RyuOS device -->
+    <string name="about_device_name">Device</string>
+
     <!-- SELinux Status -->
     <string name="selinux_status">SELinux status</string>
     <string name="selinux_status_disabled">Disabled</string>

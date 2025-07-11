@@ -12,6 +12,9 @@
 
     <string name="maintainer">Pengelola</string>
 
+    <!-- RyuOS device -->
+    <string name="about_device_name">Perangkat</string>
+
     <!-- SELinux Status -->
     <string name="selinux_status">Status SELinux</string>
     <string name="selinux_status_disabled">Disabled</string>
