@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.deviceinfo.firmwareversion;
+package com.android.settings.deviceinfo.ryuos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -42,7 +42,7 @@ public class RyuOSVersionPreferenceController extends BasePreferenceController {
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
-    private static final String KEY_RYUOS_VERSION_PROP = "ro.ryuos.version";
+    private static final String KEY_RYUOS_VERSION_PROP = "org.ryuos.version";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];

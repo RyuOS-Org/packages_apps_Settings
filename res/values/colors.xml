@@ -270,4 +270,6 @@
     <color name="system_secondary">@android:color/system_secondary_light</color>
 
     <color name="bg_card_banner">@android:color/system_neutral1_10</color>
+    <color name="ryu_icon_accent">@android:color/system_accent1_600</color>
+    <color name="ryu_text_accent">?android:attr/textColorPrimary</color>
 </resources>
